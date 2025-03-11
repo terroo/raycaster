@@ -1,0 +1,8 @@
+auto flags = "-g -Wall -Werror -Wpedantic -fsanitize=address"
+flags = "-Ofast"
+
+auto build = "g++ " + flags + " *.cpp -lsfml-graphics -lsfml-window -lsfml-system"
+output(build)
+
+exec(build)
+exec("./a.out 2>/dev/null")
